@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Happy Birthday Ichel ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Cormorant Garamond', serif;
+background:
+radial-gradient(circle at top,#4a002f,#160012 70%);
+color:white;
+overflow:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+position:relative;
+}
+
+/* FLOWERS */
+
+.flowers{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.flower{
+position:absolute;
+top:-50px;
+font-size:18px;
+animation:fall linear infinite;
+opacity:.7;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+z-index:2;
+}
+
+.small-text{
+font-size:20px;
+opacity:.7;
+margin-bottom:20px;
+font-style:italic;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:500;
+line-height:1.1;
+}
+
+.hero span{
+color:#ff9dcf;
+font-style:italic;
+}
+
+.hero p{
+margin-top:25px;
+opacity:.7;
+font-size:20px;
+}
+
+.gift-box{
+margin:50px auto 0;
+width:140px;
+height:140px;
+background:#ff4d88;
+position:relative;
+border-radius:15px;
+cursor:pointer;
+transition:.5s;
+box-shadow:0 0 30px rgba(255,105,180,.5);
+animation:float 2s infinite ease-in-out;
+}
+
+.gift-box::before{
+content:'';
+position:absolute;
+width:25px;
+height:140px;
+background:white;
+left:50%;
+transform:translateX(-50%);
+}
+
+.gift-box::after{
+content:'';
+position:absolute;
+height:25px;
+width:140px;
+background:white;
+top:50%;
+transform:translateY(-50%);
+}
+
+.lid{
+position:absolute;
+width:160px;
+height:35px;
+background:#ff77aa;
+top:-20px;
+left:-10px;
+border-radius:10px;
+transition:1s;
+}
+
+.opened .lid{
+transform:
+rotate(-25deg)
+translate(-40px,-60px);
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+/* HEARTS */
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+bottom:0;
+font-size:24px;
+opacity:0;
+animation:rise 4s linear forwards;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+}
+
+/* LETTER */
+
+.card{
+max-width:850px;
+padding:50px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+border-radius:30px;
+text-align:center;
+z-index:2;
+}
+
+.card h2{
+font-size:60px;
+margin-bottom:25px;
+font-weight:500;
+}
+
+.card h2 span{
+color:#ff9dcf;
+font-style:italic;
+}
+
+.card p{
+font-size:24px;
+line-height:1.8;
+opacity:.9;
+margin-bottom:20px;
+}
+
+.signature{
+margin-top:30px;
+font-size:35px;
+color:#ff9dcf;
+}
+
+/* GRID */
+
+.grid-title{
+text-align:center;
+margin-bottom:50px;
+font-size:60px;
+z-index:2;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+width:100%;
+z-index:2;
+}
+
+.box{
+background:rgba(255,255,255,.07);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+text-align:center;
+transition:.3s;
+}
+
+.box:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,.12);
+}
+
+.box h3{
+font-size:35px;
+margin-bottom:15px;
+}
+
+.box p{
+font-size:22px;
+opacity:.8;
+}
+
+/* FLOWER SECTION */
+
+.garden{
+text-align:center;
+z-index:2;
+}
+
+.garden h2{
+font-size:65px;
+margin-bottom:40px;
+}
+
+.garden span{
+color:#ff9dcf;
+font-style:italic;
+}
+
+.big-flowers{
+font-size:70px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+/* GALLERY */
+
+.gallery-title{
+font-size:65px;
+text-align:center;
+margin-bottom:50px;
+z-index:2;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+width:100%;
+z-index:2;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:25px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+/* END */
+
+.end{
+text-align:center;
+z-index:2;
+}
+
+.end h1{
+font-size:75px;
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.end span{
+color:#ff9dcf;
+font-style:italic;
+}
+
+.end p{
+font-size:28px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+opacity:.9;
+}
+
+/* MUSIC */
+
+.music-player{
+position:fixed;
+left:20px;
+bottom:20px;
+z-index:999;
+background:rgba(0,0,0,.4);
+padding:15px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+.music-player audio{
+width:220px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:50px;
+}
+
+.card h2,
+.grid-title,
+.garden h2,
+.gallery-title,
+.end h1{
+font-size:42px;
+}
+
+.card p,
+.box p,
+.end p{
+font-size:20px;
+}
+
+.big-flowers{
+font-size:50px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="flowers"></div>
+
+<div class="music-player">
+<audio id="bgMusic" controls loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- HERO -->
+
+<section>
+
+<div class="hero">
+
+<div class="small-text">
+a birthday serenade in bloom 🌸
+</div>
+
+<h1>
+Happy Birthday,<br>
+<span>Ichel</span>
+</h1>
+
+<p>
+Today the whole universe is celebrating you ✨
+</p>
+
+<div class="gift-box" id="openGift">
+<div class="lid"></div>
+</div>
+
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+</section>
+
+<!-- LETTER -->
+
+<section>
+
+<div class="card">
+
+<h2>
+Today is the day <span>the world became more beautiful</span>
+</h2>
+
+<p>
+Selamat ulang tahun yaa Ichel ❤️
+</p>
+
+<p>
+Makasih karena udah hadir di dunia ini dan bikin semuanya jadi lebih indah.
+Semoga semua hal baik selalu datang ke kamu.
+</p>
+
+<p>
+Semoga semua mimpi kamu tercapai,
+selalu bahagia,
+dan selalu dikelilingi orang yang sayang sama kamu.
+</p>
+
+<p>
+Aku cuma mau bilang,
+aku bersyukur banget bisa kenal kamu ✨
+</p>
+
+<div class="signature">
+- Irul ❤️
+</div>
+
+</div>
+
+</section>
+
+<!-- REASONS -->
+
+<section style="flex-direction:column;">
+
+<h2 class="grid-title">
+What I Celebrate About You ✨
+</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>🌸 Senyumanmu</h3>
+<p>
+Senyum kamu selalu bikin hari jadi lebih baik.
+</p>
+</div>
+
+<div class="box">
+<h3>💖 Perhatianmu</h3>
+<p>
+Hal kecil dari kamu selalu terasa spesial.
+</p>
+</div>
+
+<div class="box">
+<h3>🌷 Tingkah Lucumu</h3>
+<p>
+Cara kamu bercanda selalu bikin gemes.
+</p>
+</div>
+
+<div class="box">
+<h3>✨ Tatapanmu</h3>
+<p>
+Tatapan kamu punya cara sendiri buat nenangin.
+</p>
+</div>
+
+<div class="box">
+<h3>🌹 Suaramu</h3>
+<p>
+Suara kamu selalu enak didengar.
+</p>
+</div>
+
+<div class="box">
+<h3>💞 Semua Tentang Kamu</h3>
+<p>
+Karena jadi diri kamu aja udah cukup spesial.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FLOWER -->
+
+<section>
+
+<div class="garden">
+
+<h2>
+A Garden Blooming <span>Just For You</span>
+</h2>
+
+<div class="big-flowers">
+🌹 🌸 🌷 🌺 🌻 💐
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section style="flex-direction:column;">
+
+<h2 class="gallery-title">
+Your Beautiful Pictures 📸
+</h2>
+
+<div class="gallery">
+
+<img src="images/foto1.jpg">
+<img src="images/foto2.jpg">
+<img src="images/foto3.jpg">
+<img src="images/foto4.jpg">
+<img src="images/foto5.jpg">
+<img src="images/foto6.jpg">
+<img src="images/foto7.jpg">
+<img src="images/foto8.jpg">
+
+</div>
+
+</section>
+
+<!-- END -->
+
+<section>
+
+<div class="end">
+
+<h1>
+You Are Loved <span>More Than You Know</span>
+</h1>
+
+<p>
+Semoga tahun ini penuh kebahagiaan,
+tawa,
+dan semua hal indah buat kamu 🌸
+</p>
+
+<p style="margin-top:25px;">
+Tetap jadi Ichel yang manis,
+cantik,
+dan selalu bersinar yaa ❤️
+</p>
+
+<p style="margin-top:35px;">
+Made with love by Irul 💖
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+const body = document.body;
+const gift = document.getElementById("openGift");
+const music = document.getElementById("bgMusic");
+const hearts = document.getElementById("hearts");
+
+gift.addEventListener("click", async () => {
+
+body.classList.add("opened");
+body.style.overflowY = "auto";
+
+try{
+await music.play();
+}catch(err){
+console.log(err);
+}
+
+for(let i=0;i<25;i++){
+
+let heart = document.createElement("div");
+
+heart.className = "heart";
+heart.innerHTML = "💖";
+
+heart.style.left = Math.random()*100+"%";
+heart.style.animationDelay = Math.random()*2+"s";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},4000);
+
+}
+
+gift.style.pointerEvents = "none";
+
+});
+
+/* FLOWERS */
+
+const flowers = document.querySelector(".flowers");
+
+const flowerList = [
+"🌸","🌺","🌷","💮"
+];
+
+for(let i=0;i<25;i++){
+
+let flower = document.createElement("div");
+
+flower.className = "flower";
+flower.innerHTML =
+flowerList[Math.floor(Math.random()*flowerList.length)];
+
+flower.style.left = Math.random()*100+"%";
+
+flower.style.animationDuration =
+(8 + Math.random()*8)+"s";
+
+flower.style.fontSize =
+(12 + Math.random()*12)+"px";
+
+flower.style.opacity =
+Math.random();
+
+flowers.appendChild(flower);
+
+}
+
+</script>
+
+</body>
+</html>
